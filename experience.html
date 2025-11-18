@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanawat Sawangsree | Experience</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #050509;
+      --bg-panel: rgba(20, 22, 32, 0.92);
+      --bg-pill: rgba(39, 39, 54, 0.85);
+      --accent: #f31260;
+      --secondary: #f97316;
+      --text-primary: #f5f5f7;
+      --text-muted: #a1a1b5;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      position: relative;
+      background: radial-gradient(circle at 20% 20%, rgba(244, 63, 94, 0.12), transparent 40%),
+                  radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.16), transparent 50%),
+                  linear-gradient(135deg, #050509, #0f0c16 65%, #1c0d17);
+      color: var(--text-primary);
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 10%, rgba(248, 113, 113, 0.2), transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(239, 68, 68, 0.2), transparent 55%);
+      pointer-events: none;
+      opacity: 0.7;
+      z-index: -1;
+    }
+    .fade-in { animation: fadeInUp 0.8s ease-out; }
+    @keyframes fadeInUp { from {opacity:0;transform:translateY(40px);} to {opacity:1;transform:translateY(0);} }
+    .glass-panel {
+      background: var(--bg-panel);
+      border: 1px solid rgba(250, 250, 252, 0.06);
+      box-shadow: 0 35px 60px rgba(0, 0, 0, 0.45);
+    }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-pill);
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .nav-pill:hover { color: var(--text-primary); border-color: rgba(255, 255, 255, 0.15); }
+    .nav-pill--active {
+      background: linear-gradient(120deg, var(--accent), var(--secondary));
+      color: #fff;
+      box-shadow: 0 15px 30px rgba(244, 63, 94, 0.45);
+    }
+    .tag-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: #fef2f2;
+      background: rgba(244, 63, 94, 0.18);
+      border: 1px solid rgba(244, 63, 94, 0.35);
+    }
+  </style>
+</head>
+<body x-data x-init="$el.classList.add('opacity-0'); setTimeout(() => $el.classList.remove('opacity-0'), 50)" class="transition-opacity duration-500 ease-in-out opacity-100 text-slate-50">
+  <header class="bg-black/40 backdrop-blur-2xl shadow-lg sticky top-0 z-50 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-4">
+        <div class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-[#ff1a4b] via-[#f31260] to-[#fb923c] text-white font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/40">TS</div>
+        <div>
+          <p class="text-[0.65rem] uppercase tracking-[0.45em] text-slate-400">Portfolio</p>
+          <h1 class="text-2xl sm:text-3xl font-bold text-white">Tanawat Sawangsree</h1>
+        </div>
+      </div>
+      <nav class="flex flex-wrap items-center gap-3 text-sm">
+        <a href="index.html" class="nav-pill">About</a>
+        <a href="profile.html" class="nav-pill">Profile</a>
+        <a href="experience.html" class="nav-pill nav-pill--active">Experience</a>
+        <a href="contact.html" class="nav-pill">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 fade-in">
+    <div class="glass-panel rounded-3xl p-8 md:p-10">
+      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-xs uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Selected experience</p>
+          <h2 class="text-3xl font-bold text-white">Transforming ideas into usable products</h2>
+          <p class="text-slate-300 mt-4 max-w-2xl">Projects blend research, UI craft, and modern web technologies. From APIs to responsive systems, I ship delightful details and measurable value.</p>
+        </div>
+        <div class="rounded-2xl bg-black/30 border border-white/10 px-6 py-4 text-sm text-slate-300">
+          <p class="font-semibold text-white">Highlights</p>
+          <p>4 in-production side projects</p>
+          <p>Rapid prototyping for coursework + freelance briefs</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-6 fade-in">
+    <h3 class="text-lg font-semibold text-slate-400 tracking-[0.3em] uppercase mb-6">Web Projects</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <article class="glass-panel rounded-3xl p-6 flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <h4 class="text-xl font-semibold text-white">Movie Search App</h4>
+          <span class="text-xs font-semibold tracking-[0.3em] text-[#fb7185]">UI + API</span>
+        </div>
+        <p class="text-sm text-slate-300">Search and discover films using the OMDB API with clean cards and smooth transitions.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-chip">JavaScript</span>
+          <span class="tag-chip">OMDB API</span>
+          <span class="tag-chip">Responsive UI</span>
+        </div>
+        <a href="https://movie-search-app-byojoe.netlify.app/" target="_blank" class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-[#fb7185] hover:text-white">Visit project →</a>
+      </article>
+      <article class="glass-panel rounded-3xl p-6 flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <h4 class="text-xl font-semibold text-white">Weather App</h4>
+          <span class="text-xs font-semibold tracking-[0.3em] text-[#fb7185]">Realtime</span>
+        </div>
+        <p class="text-sm text-slate-300">Provides live weather from OpenWeatherMap with friendly typography and iconography.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-chip">JavaScript</span>
+          <span class="tag-chip">OpenWeather</span>
+          <span class="tag-chip">Card layout</span>
+        </div>
+        <a href="https://weather-app-byojoe.netlify.app/" target="_blank" class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-[#fb7185] hover:text-white">Visit project →</a>
+      </article>
+      <article class="glass-panel rounded-3xl p-6 flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <h4 class="text-xl font-semibold text-white">Recipe Finder App</h4>
+          <span class="text-xs font-semibold tracking-[0.3em] text-[#fb7185]">Discovery</span>
+        </div>
+        <p class="text-sm text-slate-300">Filter recipes by ingredients, highlighting nutritional info and exploration cues.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-chip">UX copy</span>
+          <span class="tag-chip">Filtering</span>
+          <span class="tag-chip">Responsive</span>
+        </div>
+        <a href="https://ojoeduy.github.io/Recipe-Finder-App/" target="_blank" class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-[#fb7185] hover:text-white">Visit project →</a>
+      </article>
+      <article class="glass-panel rounded-3xl p-6 flex flex-col gap-4">
+        <div class="flex items-center justify-between">
+          <h4 class="text-xl font-semibold text-white">Digital Clock Timer</h4>
+          <span class="text-xs font-semibold tracking-[0.3em] text-[#fb7185]">Micro UI</span>
+        </div>
+        <p class="text-sm text-slate-300">A playful clock experimenting with gradients, typography, and accurate intervals.</p>
+        <div class="flex flex-wrap gap-2">
+          <span class="tag-chip">Animation</span>
+          <span class="tag-chip">JavaScript</span>
+          <span class="tag-chip">UI polish</span>
+        </div>
+        <a href="https://ojoeduy.github.io/digital-clock-timer/" target="_blank" class="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-[#fb7185] hover:text-white">Visit project →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 fade-in">
+    <div class="grid lg:grid-cols-[1.1fr,0.9fr] gap-8">
+      <div class="glass-panel rounded-3xl p-6 space-y-6">
+        <p class="text-xs uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Practical Projects</p>
+        <article class="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-semibold text-white">Classroom Booking System</h4>
+            <span class="text-xs font-semibold text-[#fb7185]">Final project</span>
+          </div>
+          <p class="text-sm text-slate-300">Angular frontend + Node.js/Express.js backend with MySQL. Supports CRUD booking, history, and cancellations.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-semibold text-white">Hotel Booking Website</h4>
+            <span class="text-xs font-semibold text-[#fb7185]">UX + UI</span>
+          </div>
+          <p class="text-sm text-slate-300">Crafted information architecture, wireframes, and a responsive marketing site for hotel reservations.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-black/30 p-5">
+          <div class="flex items-center justify-between">
+            <h4 class="text-lg font-semibold text-white">Database Management System</h4>
+            <span class="text-xs font-semibold text-[#fb7185]">Data</span>
+          </div>
+          <p class="text-sm text-slate-300">Built CRUD dashboards connected to MySQL to manage and retrieve structured data.</p>
+        </article>
+      </div>
+      <div class="glass-panel rounded-3xl p-6 space-y-4">
+        <p class="text-xs uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Workflow</p>
+        <div class="space-y-4 text-sm text-slate-300">
+          <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+            <p class="text-sm font-semibold text-white">Discovery & Research</p>
+            <p>Conduct interviews, benchmark competitors, define success metrics.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+            <p class="text-sm font-semibold text-white">Design & Prototype</p>
+            <p>Create flows, wireframes, and high-fidelity prototypes using Figma + Tailwind components.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-black/30 p-5">
+            <p class="text-sm font-semibold text-white">Delivery & QA</p>
+            <p>Collaborate with developers, test across devices, and document for smooth handoff.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black/40 border-t border-white/10 shadow-inner mt-12 py-6 text-center text-sm text-slate-400">
+    © 2025 Tanawat Sawangsree. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Tanawat Sawangsree</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #050509;
+      --bg-panel: rgba(20, 22, 32, 0.92);
+      --bg-pill: rgba(39, 39, 54, 0.85);
+      --accent: #f31260;
+      --secondary: #f97316;
+      --text-primary: #f5f5f7;
+      --text-muted: #a1a1b5;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      position: relative;
+      background: radial-gradient(circle at 20% 20%, rgba(244, 63, 94, 0.12), transparent 40%),
+                  radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.16), transparent 50%),
+                  linear-gradient(135deg, #050509, #0f0c16 65%, #1c0d17);
+      color: var(--text-primary);
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 10%, rgba(248, 113, 113, 0.2), transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(239, 68, 68, 0.2), transparent 55%);
+      pointer-events: none;
+      opacity: 0.7;
+      z-index: -1;
+    }
+    .fade-in { animation: fadeInUp 0.8s ease-out; }
+    @keyframes fadeInUp { from {opacity:0;transform:translateY(40px);} to {opacity:1;transform:translateY(0);} }
+    .glass-panel {
+      background: var(--bg-panel);
+      border: 1px solid rgba(250, 250, 252, 0.06);
+      box-shadow: 0 35px 60px rgba(0, 0, 0, 0.45);
+    }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-pill);
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .nav-pill:hover { color: var(--text-primary); border-color: rgba(255,255,255,0.15);} 
+    .nav-pill--active {
+      background: linear-gradient(120deg, var(--accent), var(--secondary));
+      color: #fff;
+      box-shadow: 0 15px 30px rgba(244, 63, 94, 0.45);
+    }
+    .tag-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      color: #fef2f2;
+      background: rgba(244,63,94,0.18);
+      border: 1px solid rgba(244,63,94,0.35);
+    }
+    input, textarea {
+      background: rgba(255,255,255,0.03);
+      color: var(--text-primary);
+    }
+  </style>
+</head>
+<body x-data x-init="$el.classList.add('opacity-0'); setTimeout(() => $el.classList.remove('opacity-0'), 50)" class="transition-opacity duration-500 ease-in-out opacity-100 text-slate-50">
+  <header class="bg-black/40 backdrop-blur-2xl shadow-lg sticky top-0 z-50 border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <div class="flex items-center gap-4">
+        <div class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-[#ff1a4b] via-[#f31260] to-[#fb923c] text-white font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/40">TS</div>
+        <div>
+          <p class="text-[0.65rem] uppercase tracking-[0.45em] text-slate-400">Portfolio</p>
+          <h1 class="text-2xl sm:text-3xl font-bold text-white">Tanawat Sawangsree</h1>
+        </div>
+      </div>
+      <nav class="flex flex-wrap items-center gap-3 text-sm">
+        <a href="index.html" class="nav-pill">About</a>
+        <a href="profile.html" class="nav-pill">Profile</a>
+        <a href="experience.html" class="nav-pill">Experience</a>
+        <a href="contact.html" class="nav-pill nav-pill--active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14 fade-in">
+    <div class="glass-panel rounded-3xl p-8 md:p-12 grid lg:grid-cols-[0.9fr,1.1fr] gap-10">
+      <div class="space-y-6">
+        <p class="text-xs uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Get in touch</p>
+        <h2 class="text-4xl font-bold text-white leading-tight">Let's collaborate on meaningful experiences</h2>
+        <p class="text-base text-slate-300">Need help crafting delightful UI, optimizing UX flows, or building a premium front-end? I'm open to internships, freelance briefs, and cross-functional collaborations.</p>
+        <div class="space-y-4 text-sm text-slate-300">
+          <div class="flex gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#f31260] to-[#fb923c] text-white font-semibold flex items-center justify-center">TEL</div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500 font-semibold">Phone</p>
+              <p class="text-lg font-semibold text-white">092-273-5063</p>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#f31260] to-[#fb923c] text-white font-semibold flex items-center justify-center">FB</div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500 font-semibold">Facebook</p>
+              <a href="https://www.facebook.com/tanawat.sawangsree" target="_blank" class="text-lg font-semibold text-[#fb7185] hover:text-white">tanawat.sawangsree</a>
+            </div>
+          </div>
+          <div class="flex gap-4">
+            <div class="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#f31260] to-[#fb923c] text-white font-semibold flex items-center justify-center">MAIL</div>
+            <div>
+              <p class="text-xs uppercase tracking-[0.3em] text-slate-500 font-semibold">Email</p>
+              <p class="text-lg font-semibold text-white">tanawat.sawan@bumail.net</p>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3 pt-4">
+          <span class="tag-chip">Bangkok, Thailand (GMT+7)</span>
+          <span class="tag-chip">Thai / English</span>
+          <span class="tag-chip">Reply within 24 hrs</span>
+        </div>
+      </div>
+      <div class="rounded-[32px] border border-white/10 bg-black/30 p-6 shadow-inner">
+        <p class="text-sm uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Drop a line</p>
+        <h3 class="text-2xl font-semibold text-white mt-2">Tell me about your idea</h3>
+        <form action="mailto:tanawat.sawan@bumail.net" method="POST" enctype="text/plain" class="mt-6 space-y-4">
+          <div>
+            <label for="name" class="text-sm font-semibold text-slate-300">Your name</label>
+            <input id="name" name="name" type="text" required class="mt-2 w-full rounded-2xl border border-white/10 px-4 py-3 text-sm focus:border-[#f31260] focus:ring-2 focus:ring-[#f31260]/30 outline-none" placeholder="Enter your name" />
+          </div>
+          <div>
+            <label for="email" class="text-sm font-semibold text-slate-300">Email</label>
+            <input id="email" name="email" type="email" required class="mt-2 w-full rounded-2xl border border-white/10 px-4 py-3 text-sm focus:border-[#f31260] focus:ring-2 focus:ring-[#f31260]/30 outline-none" placeholder="name@email.com" />
+          </div>
+          <div>
+            <label for="message" class="text-sm font-semibold text-slate-300">Message</label>
+            <textarea id="message" name="message" rows="5" required class="mt-2 w-full rounded-2xl border border-white/10 px-4 py-3 text-sm focus:border-[#f31260] focus:ring-2 focus:ring-[#f31260]/30 outline-none" placeholder="What can I help you build?"></textarea>
+          </div>
+          <button type="submit" class="w-full rounded-2xl bg-gradient-to-r from-[#f31260] to-[#fb923c] text-white font-semibold py-3 shadow-lg shadow-red-500/40 hover:translate-y-0.5 transition-transform">Send message</button>
+          <p class="text-xs text-slate-500 text-center">Submitting opens your default email app. Prefer direct email? Write to tanawat.sawan@bumail.net.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-black/40 border-t border-white/10 shadow-inner mt-12 py-6 text-center text-sm text-slate-400">
+    © 2025 Tanawat Sawangsree. All rights reserved.
+  </footer>
+</body>
+</html>

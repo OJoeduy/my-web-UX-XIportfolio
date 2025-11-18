@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tanawat Sawangsree | About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #050509;
+      --bg-panel: rgba(20, 22, 32, 0.92);
+      --bg-pill: rgba(39, 39, 54, 0.85);
+      --accent: #f31260;
+      --secondary: #f97316;
+      --text-primary: #f5f5f7;
+      --text-muted: #a1a1b5;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      position: relative;
+      background: radial-gradient(circle at 20% 20%, rgba(244, 63, 94, 0.12), transparent 40%),
+                  radial-gradient(circle at 80% 0%, rgba(249, 115, 22, 0.16), transparent 50%),
+                  linear-gradient(135deg, #050509, #0f0c16 65%, #1c0d17);
+      color: var(--text-primary);
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at 50% 10%, rgba(248, 113, 113, 0.2), transparent 60%),
+                  radial-gradient(circle at 10% 80%, rgba(239, 68, 68, 0.2), transparent 55%);
+      pointer-events: none;
+      opacity: 0.7;
+      z-index: -1;
+    }
+    .fade-in { animation: fadeInUp 0.8s ease-out; }
+    @keyframes fadeInUp { from {opacity:0;transform:translateY(40px);} to {opacity:1;transform:translateY(0);} }
+    .glass-panel {
+      background: var(--bg-panel);
+      border: 1px solid rgba(250, 250, 252, 0.06);
+      box-shadow: 0 35px 60px rgba(0, 0, 0, 0.45);
+    }
+    .nav-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.45rem 1.3rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-pill);
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+    .nav-pill:hover { color: var(--text-primary); border-color: rgba(255, 255, 255, 0.15); }
+    .nav-pill--active {
+      background: linear-gradient(120deg, var(--accent), var(--secondary));
+      color: #fff;
+      box-shadow: 0 15px 30px rgba(244, 63, 94, 0.45);
+    }
+    .tag-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.32rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: #fef2f2;
+      background: rgba(244, 63, 94, 0.18);
+      border: 1px solid rgba(244, 63, 94, 0.35);
+    }
+  </style>
+</head>
+<body x-data x-init="$el.classList.add('opacity-0'); setTimeout(() => $el.classList.remove('opacity-0'), 50)" class="transition-opacity duration-500 ease-in-out opacity-100 text-slate-50">
+
+  <header class="bg-black/40 backdrop-blur-2xl shadow-lg sticky top-0 z-50 border-b border-white/10">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col items-center gap-4">
+      <div class="flex flex-col items-center gap-2 text-center">
+        <div class="h-12 w-12 rounded-2xl bg-gradient-to-tr from-[#ff1a4b] via-[#f31260] to-[#fb923c] text-white font-bold text-xl flex items-center justify-center shadow-lg shadow-red-500/40">TS</div>
+        <div>
+          <p class="text-[0.65rem] uppercase tracking-[0.45em] text-slate-400">Portfolio</p>
+          <h1 class="text-2xl sm:text-3xl font-bold text-white">Tanawat Sawangsree</h1>
+        </div>
+      </div>
+      <nav class="flex flex-wrap items-center justify-center gap-5 text-sm">
+        <a href="index.html" class="nav-pill nav-pill--active">Home</a>
+        <a href="profile.html" class="nav-pill">Profile</a>
+        <a href="experience.html" class="nav-pill">Projects</a>
+        <a href="experience.html#Practical" class="nav-pill">Certification</a>
+        <a href="contact.html" class="nav-pill">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="px-4 sm:px-6 lg:px-8 py-16 fade-in">
+      <div class="max-w-4xl mx-auto flex flex-col gap-10 items-center">
+        <div class="w-full overflow-hidden rounded-[32px] border border-white/10 shadow-2xl">
+          <img src="aboutme.jpg" alt="About me" class="w-full h-72 md:h-96 object-cover" />
+        </div>
+        <article class="glass-panel rounded-[32px] p-10 w-full">
+          <p class="text-xs font-semibold tracking-[0.45em] uppercase text-[#fb7185]">A Bit About Me</p>
+          <h2 class="text-4xl font-bold text-white mt-4">Designing bold experiences that stay effortless</h2>
+          <p class="text-lg text-slate-300 leading-relaxed mt-6">I am a university student and UX/UI designer with a deep passion for technology. The ever-evolving world of design and new innovations inspires me to learn continuously, explore new concepts, and translate insights into interfaces that feel human. I believe learning never ends, so I face new challenges with enthusiasm and determination.</p>
+          <div class="flex flex-wrap gap-3 mt-8">
+            <span class="tag-chip">UX Research</span>
+            <span class="tag-chip">UI Systems</span>
+            <span class="tag-chip">Front-end Dev</span>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="experience.html" class="px-6 py-3 rounded-full bg-gradient-to-r from-[#f31260] to-[#fb923c] text-white font-semibold shadow-lg shadow-red-500/40">See my projects</a>
+            <a href="profile.html" class="px-6 py-3 rounded-full border border-white/20 text-white/90 font-semibold hover:bg-white/10 transition-colors">View profile</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="px-4 sm:px-6 lg:px-8 pb-12 fade-in">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-4">
+        <div class="glass-panel rounded-2xl p-6 text-center">
+          <p class="text-3xl font-bold text-[#fb7185]">4+</p>
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Years learning</p>
+        </div>
+        <div class="glass-panel rounded-2xl p-6 text-center">
+          <p class="text-3xl font-bold text-[#fb7185]">12</p>
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Product ideas</p>
+        </div>
+        <div class="glass-panel rounded-2xl p-6 text-center">
+          <p class="text-3xl font-bold text-[#fb7185]">5</p>
+          <p class="text-xs uppercase tracking-[0.3em] text-slate-400">Live projects</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 sm:px-6 lg:px-8 pb-16 fade-in">
+      <div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
+        <div class="glass-panel rounded-3xl p-6 space-y-3">
+          <p class="text-xs uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Process</p>
+          <h4 class="text-xl font-semibold text-white">Insight to interface</h4>
+          <p class="text-sm text-slate-300">Workshops, low-fi flows, and tangible prototypes keep projects decisive without losing polish.</p>
+          <ul class="text-sm text-slate-400 list-disc pl-4 space-y-1">
+            <li>Stakeholder mapping & journey flows</li>
+            <li>Usability scorecards + heuristic reviews</li>
+            <li>Design tokens & responsive grids</li>
+          </ul>
+        </div>
+        <div class="glass-panel rounded-3xl p-6 space-y-3">
+          <p class="text-xs uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Toolkit</p>
+          <h4 class="text-xl font-semibold text-white">Pixels + code</h4>
+          <p class="text-sm text-slate-300">Figma, Adobe XD, HTML, CSS, JavaScript, Angular, React, Node.js, and Tailwind power my delivery.</p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="tag-chip">Figma</span>
+            <span class="tag-chip">Tailwind</span>
+            <span class="tag-chip">TypeScript</span>
+            <span class="tag-chip">MySQL</span>
+          </div>
+        </div>
+        <div class="glass-panel rounded-3xl p-6 space-y-3">
+          <p class="text-xs uppercase tracking-[0.4em] text-[#fb7185] font-semibold">Values</p>
+          <h4 class="text-xl font-semibold text-white">Human before pixels</h4>
+          <p class="text-sm text-slate-300">Empathy, curiosity, and measurable impact guide every iteration.</p>
+          <ul class="text-sm text-slate-400 list-disc pl-4 space-y-1">
+            <li>Co-create with teams weekly</li>
+            <li>Measure success with clear KPIs</li>
+            <li>Document decisions for clarity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black/40 border-t border-white/10 shadow-inner mt-12 py-6 text-center text-sm text-slate-400">
+    © 2025 Tanawat Sawangsree. All rights reserved.
+  </footer>
+</body>
+</html>
